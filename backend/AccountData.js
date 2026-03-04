@@ -17,6 +17,11 @@
 
     email: "alexW@gmail.com (Chirelle Habchi)";
     password: "Test12345";
+    role: "jobseeker";
+
+    email: "michealGh@gmail.com";
+    password: "Micheal123456789";
     role: "jobseeker"
+
 
 }

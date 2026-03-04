@@ -3,13 +3,13 @@ import { Briefcase } from "lucide-react";
 function Footer() {
   return (
     <footer className="relative bg-gray-50 text-gray-900 overflow-hidden">
-      <div className="relative z-10 px-6 py-16">
+      <div className="relative z-10 px-6 py-10">
         <div className="max-w-6xl mx-auto ">
           {/* Main Footer Content */}
           <div className="text-center space-y-8">
             {/* Logo/Brand */}
             <div className="space-y-4">
-              <div className="flex items-center justify-center space-x-2 mb-6">
+              <div className="flex items-center justify-center space-x-2 mb-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <Briefcase className="text-white w-6 h-6" />
                 </div>
