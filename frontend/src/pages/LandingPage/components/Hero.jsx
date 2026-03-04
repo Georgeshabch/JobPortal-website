@@ -10,6 +10,11 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 
 function Hero() {
+
+const MotionHeadingOne = motion.h1;
+const MotionParagraph = motion.p;
+const MotionDiv = motion.div;
+const MotionButton = motion.button;  
 const { user , isAuthenticated } = useAuth();
   const navigate = useNavigate();
   const stats = [
@@ -23,7 +28,7 @@ const { user , isAuthenticated } = useAuth();
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
-          <motion.h1
+          <MotionHeadingOne
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -31,10 +36,10 @@ const { user , isAuthenticated } = useAuth();
           >
             Find Your Dream Job or 
             <span className="block bg-gradient-to-r from-blue-600 to-purple-700 bg-clip-text text-transparent mt-2">Perfect Hire</span>
-          </motion.h1>
+          </MotionHeadingOne>
 
           {/* Subheading */}
-          <motion.p
+          <MotionParagraph
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -42,15 +47,15 @@ const { user , isAuthenticated } = useAuth();
           >
             Connecting Talent with Opportunity Seamlessly. Your next career move
             or perfect candidate is just a click away.
-          </motion.p>
+          </MotionParagraph>
 
           {/* CTA Buttons */}
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-16 items-center">
-            <motion.button
+            <MotionButton
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="group bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center spaece-x-2"
@@ -58,9 +63,9 @@ const { user , isAuthenticated } = useAuth();
                 <Search className="w-5 h-5" />
                 <span>Find Jobs</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </MotionButton>
 
-            <motion.button
+            <MotionButton
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-white border-gray-2 00 text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-300 hover:bg-gray-50 transition-all duration-300 shadow-sm hover:shadow-md"
@@ -73,17 +78,17 @@ const { user , isAuthenticated } = useAuth();
               }}
               >
                 Post a Job
-              </motion.button>
-          </motion.div>
+              </MotionButton>
+          </MotionDiv>
 
             {/* Statistics */}
-            <motion.div
+            <MotionDiv
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
                     {stats.map((stat, index) => (
-                        <motion.div
+                        <MotionDiv
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -94,9 +99,9 @@ const { user , isAuthenticated } = useAuth();
                                 </div>
                                 <div className="text-2xl font-bold text-gray-900 ">{stat.value}</div>
                                 <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
-                </motion.div>
+                </MotionDiv>
                     ))}
-            </motion.div>
+            </MotionDiv>
         </div>
       </div>
 

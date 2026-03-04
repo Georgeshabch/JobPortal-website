@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Save, X, Trash2 } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
-import axiosInstance from "../../utils/axiosInstance";
+import axiosInstance from "../../utils/axiosinstance";
 import { API_PATHS } from "../../utils/apiPaths";
 import toast from "react-hot-toast";
 import uploadImage from "../../utils/uploadImage"; // 👈 Make sure this supports generic file upload

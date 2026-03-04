@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import motion from "framer-motion"
+import { motion } from "framer-motion"
 import {
   Mail,
   Eye,
@@ -19,6 +18,8 @@ import { useAuth } from "../../context/AuthContext";
 function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const MotionDiv = motion.div;
+  const MotionP = motion.p;
 
   const [formData, setFormData] = useState({
     email: "",
@@ -134,7 +135,7 @@ const handleSubmit = async (e) => {
   if (formState.success) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4 }}
@@ -149,7 +150,7 @@ const handleSubmit = async (e) => {
           <p className="text-gray-600 mt-2 text-sm">
             Redirecting to your dashboard...
           </p>
-        </motion.div>
+        </MotionDiv>
       </div>
     );
   }
@@ -157,7 +158,7 @@ const handleSubmit = async (e) => {
   // --- Login Form UI ---
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -203,14 +204,14 @@ const handleSubmit = async (e) => {
               />
             </div>
             {formState.errors.email && (
-              <motion.p
+              <MotionP
                 initial={{ opacity: 0, y: -2 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-red-500 text-sm mt-1 flex items-center"
               >
                 <AlertCircle className="w-4 h-4 mr-1" />
                 {formState.errors.email}
-              </motion.p>
+              </MotionP>
             )}
           </div>
 
@@ -259,14 +260,14 @@ const handleSubmit = async (e) => {
               </button>
             </div>
             {formState.errors.password && (
-              <motion.p
+              <MotionP
                 initial={{ opacity: 0, y: -2 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-red-500 text-sm mt-1 flex items-center"
               >
                 <AlertCircle className="w-4 h-4 mr-1" />
                 {formState.errors.password}
-              </motion.p>
+              </MotionP>
             )}
           </div>
 
@@ -309,7 +310,7 @@ const handleSubmit = async (e) => {
             </p>
           </div>
         </form>
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 }

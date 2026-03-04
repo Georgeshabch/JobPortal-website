@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -7,9 +6,10 @@ import { useAuth } from "../../../context/AuthContext";
 function Header() {
   const {user , isAuthenticated} = useAuth();
   const navigate = useNavigate();
+  const MotionHeader = motion.header 
 
   return (
-    <motion.header
+    <MotionHeader
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -82,7 +82,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </motion.header>
+    </MotionHeader>
   );
 }
 

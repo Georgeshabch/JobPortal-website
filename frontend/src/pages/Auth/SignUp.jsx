@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import {
   User,
@@ -22,6 +21,7 @@ import { useAuth } from "../../context/AuthContext";
 
 function SignUp() {
   const { login } = useAuth();
+  const MotionDiv = motion.div;
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -175,7 +175,7 @@ function SignUp() {
   if (formState.success) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md text-center"
@@ -191,7 +191,7 @@ function SignUp() {
           <p className="text-gray-600 mt-2 text-sm">
             Redirecting to your dashboard...
           </p>
-        </motion.div>
+        </MotionDiv>
       </div>
     );
   }

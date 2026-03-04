@@ -35,7 +35,7 @@ function ApplicationViewer() {
       );
       setApplications(response.data);
     } catch (error) {
-      console.log("Failed to Fetch applications");
+      console.log("Failed to Fetch applications",error);
     } finally {
       setLoading(false);
     }
