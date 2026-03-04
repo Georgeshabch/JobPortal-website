@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -21,7 +22,7 @@ function Header() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Briefcase className="w-5 h-5 text-white" />
             </div>
-            <span className="text-lg font-bold text-gray-900">JobPortal</span>
+            <span className="text-lg font-bold text-gray-900">JobPortal</span>``
           </div>
           {/* Navigation Links - Hidden on mobile */}
           <nav className="hidden md:flex items-center space-x-8">
